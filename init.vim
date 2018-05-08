@@ -221,10 +221,13 @@ set binary
 set backspace=indent,eol,start
 
 "" Tabs. May be overriten by autocmd rules
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 set expandtab
+
+"" Set width
+set colorcolumn=80
 
 "" Map leader to ,
 let mapleader=','
