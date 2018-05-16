@@ -421,6 +421,11 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (guru-global-mode 1)
+  (yas-global-mode 1)
+  (focus-mode 1)
+  (dimmer-mode 1)
+  (global-wakatime-mode 1)
   )
 
 (defun dotspacemacs/user-config ()
@@ -430,14 +435,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (guru-global-mode 1)
-  (yas-global-mode 1)
-  (focus-mode 1)
-  (dimmer-mode 1)
+  
   (setq ycmd-server-command (list "python" (file-truename "~/ycmd/ycmd")))
   (setq ycmd-extra-conf-whitelist '("~/Develop/*"))
   (setq ycmd-force-semantic-completion t)
   (add-hook 'c++-mode-hook 'ycmd-mode)
+  (set-variable 'ycmd-extra-conf-whitelist '("~/ycmd/ycm_extra_conf.py"))
+  (set-variable 'ycmd-global-config "~/ycmd/ycm_extra_conf.py")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
