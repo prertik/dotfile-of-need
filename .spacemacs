@@ -31,14 +31,12 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     vimscript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     osx
-     ivy
+     helm
      auto-completion
      better-defaults
      emacs-lisp
@@ -46,229 +44,136 @@ values."
      markdown
      org
      (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+               shell-default-height 30
+               shell-default-position 'bottom)
      spell-checking
      syntax-checking
      version-control
+     erc
+     jabber
+     rcirc
+     slack
+     spell-checking
+     syntax-checking
+     better-defaults
+     ibuffer
+     semantic
+     smex
+     typography
+     gnus
+     mu4e
+     django
+     react
+     ruby-on-rails
+     emoji
+     games
+     selectric
+     xkcd
+     agda
+     asciidoc
+     asm
+     autohotkey
+     bibtex
+     c-c++
+     clojure
+     common-lisp
+     csharp
+     csv
+     d
+     elixir
+     elm
+     emacs-lisp
+     erlang
+     ess
+     extra-langs
+     faust
+     fsharp
+     go
+     graphviz
+     haskell
+     html
+     idris
+     ipython-notebook
+     java
+     javascript
+     latex
+     lua
+     markdown
+     nim
+     ocaml
+     octave
+     php
+     plantuml
+     purescript
+     python
+     racket
+     ruby
+     rust
+     scala
+     scheme
+     shaders
+     shell-scripts
+     sml
+     sql
+     swift
+     typescript
+     vimscript
+     windows-scripts
+     yaml
+     nlinum
+     nixos
+     floobits
+     git
+     github
+     version-control
+     cscope
+     gtags
+     colors
+     themes-megapack
+     theming
+     ansible
+     cfengine
+     chrome
+     command-log
+     dash
+     deft
+     docker
+     fasd
+     finance
+     geolocation
+     imenu-list
+     nginx
+     pandoc
+     pdf-tools
+     prodigy
+     puppet
+     ranger
+     rebox
+     restclient
+     salt
+     shell
+     speed-reading
+     systemd
+     terraform
+     tmux
+     vagrant
+     ycmd
+     elfeed
+     evernote
+     search-engine
+     spotify
+     twitter
+     wakatime
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
-                                      rtags
-                                      cquery
-                                      irony
-                                      cmake-font-lock
-                                      function-args
-                                      tide
-                                      clojure-mode
-                                      cider
-                                      clojure-snippets
-                                      clj-refactor
-                                      highlight-defined
-                                      elmacro
-                                      suggest
-                                      flycheck-clojure
-                                      flycheck-clang-tidy
-                                      flycheck-clang-analyzer
-                                      flycheck-clangcheck
-                                      minimap
-                                      switch-window
-                                      focus
-                                      beacon
-                                      dimmer
-                                      web-mode
-                                      clipmon
-                                      popup-kill-ring
-                                      crux
-                                      whitespace-cleanup-mode
-                                      realgud
-                                      kaolin-themes
-                                      elpy
-                                      anaconda-mode
-                                      virtualenvwrapper
-                                      rvm
-                                      bundler
-                                      inf-ruby
-                                      enh-ruby-mode
-                                      yari
-                                      robe
-                                      rubocop
-                                      motion-mode
-                                      rspec-mode
-                                      feature-mode
-                                      rinari
-                                      lispy
-                                      parinfer
-                                      slime
-                                      common-lisp-snippets 
-                                      geiser
-                                      racket-mode
-                                      web-beautify
-                                      emmet-mode
-                                      skewer-mode
-                                      impatient-mode
-                                      restclient
-                                      elnode
-                                      js2-mode
-                                      js-comint
-                                      tern
-                                      json-mode
-                                      indium
-                                      js2-refactor
-                                      rjsx-mode
-                                      coffee-mode
-                                      purescript-mode
-                                      psci
-                                      psc-ide
-                                      php-mode
-                                      phpunit
-                                      eclim
-                                      jdee
-                                      meghanada
-                                      go-mode
-                                      flymake-go
-                                      go-autocomplete
-                                      go-errcheck
-                                      go-playground
-                                      go-playground-cli
-                                      gorepl-mode
-                                      gotest
-                                      csharp-mode
-                                      omnisharp
-                                      rust-mode
-                                      flycheck-rust
-                                      racer
-                                      cargo
-                                      erlang
-                                      company-distel
-                                      edts
-                                      company-erlang
-                                      elixir-mode
-                                      elixir-yasnippets
-                                      alchemist
-                                      haskell-mode
-                                      ghc
-                                      intero
-                                      swift-mode
-                                      company-sourcekit
-                                      scala-mode
-                                      ensime
-                                      sbt-mode
-                                      lua-mode
-                                      lfe-mode
-                                      basic-c-compile
-                                      makefile-executor
-                                      sml-mode
-                                      groovy-mode
-                                      grails
-                                      tuareg
-                                      merlin
-                                      nim-mode
-                                      d-mode
-                                      elm-mode
-                                      stan-mode
-                                      mips-mode
-                                      riscv-mode
-                                      verilog-mode
-                                      discover
-                                      discover-my-major
-                                      guide-key
-                                      guide-key-tip
-                                      cheatsheet
-                                      clojure-cheatsheet
-                                      muse
-                                      fountain-mode
-                                      guess-language
-                                      symon
-                                      system-packages
-                                      wgrep-ack
-                                      full-ack
-                                      ack
-                                      ag
-                                      pt
-                                      sift
-                                      ripgrep
-                                      gist
-                                      yagist
-                                      google
-                                      google-c-style
-                                      google-this
-                                      google-maps
-                                      ox-hugo
-                                      hyde
-                                      blog-minimal
-                                      markdown-mode+
-                                      markdown-toc
-                                      markdownfmt
-                                      auctex
-                                      latex-preview-pane
-                                      pdf-tools
-                                      org-pdfview
-                                      markdown-preview-eww
-                                      notmuch
-                                      wanderlust
-                                      mew
-                                      circe
-                                      slack
-                                      weechat
-                                      twittering-mode
-                                      sx
-                                      howdoi
-                                      weibo
-                                      elfeed
-                                      chef-mode
-                                      ansible
-                                      puppet-mode
-                                      salt-mode
-                                      docker
-                                      terraform-mode
-                                      package-utils
-                                      try
-                                      el-get
-                                      cask
-                                      pallet
-                                      quelpa
-                                      homebrew-mode 
-                                      req-package
-                                      esup
-                                      better-defaults
-                                      no-littering
-                                      auto-package-update
-                                      spu
-                                      gh
-                                      websocket
-                                      emojify
-                                      emojify-logos
-                                      solarized-theme
-                                      doom
-                                      doom-themes
-                                      color-theme-sanityinc-tomorrow
-                                      monokai-theme
-                                      cyberpunk-theme
-                                      ample-theme
-                                      moe-theme
-                                      grandshell-theme
-                                      base16-theme
-                                      emms
-                                      bongo
-                                      dionysos
-                                      mingus
-                                      elbank
-                                      ledger-mode
-                                      nyan-mode
-                                      minesweeper
-                                      xkcd
-                                      gnugo
-                                      pacmacs
-                                      speed-type
-                                      spray
-                                      wttrin
-                                      fireplace
-                                      clippy
                                       guru-mode
+                                      yasnippet-snippets
+                                      focus
+                                      dimmer
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -349,7 +254,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -525,18 +430,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (guru-global-mode 1)
+  (yas-global-mode 1)
   (focus-mode 1)
   (dimmer-mode 1)
-  (highlight-defined-mode 1)
-  (ispell-minor-mode 1)
-  (volatile-highlights-mode 1)
-  (clipmon-mode 1)
-  (smartparens-mode 1)
-  (aggressive-indent-global-mode 1)
-  (yas-global-mode 1)
-  (elmacro-mode 1)
+  (setq ycmd-server-command (list "python" (file-truename "~/ycmd/ycmd")))
+  (setq ycmd-extra-conf-whitelist '("~/Develop/*"))
+  (setq ycmd-force-semantic-completion t)
+  (add-hook 'c++-mode-hook 'ycmd-mode)
   )
-
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -545,14 +447,12 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(package-selected-packages
    (quote
-    (lispy doom-themes psc-ide psci meghanada guru-mode enh-ruby-mode emmet-mode eclim phpunit epkg closql emacsql-sqlite emacsql yari yagist xkcd wttrin wgrep-ack weibo borg realgud test-simple loc-changes load-relative kaolin-themes autothemer crux vimrc-mode dactyl-mode whitespace-cleanup-mode web-mode yasnippet-classic-snippets yasnippet-snippets popup-kill-ring clipmon highlight-indent-guides dimmer beacon focus flycheck-clojure flycheck-clangcheck flycheck-clang-tidy flycheck-clang-analyzer sublimity switch-window minimap suggest loop highlight-defined elmacro clojure-snippets clj-refactor inflections edn multiple-cursors paredit peg cider seq queue clojure-mode tide typescript-mode rtags irony function-args cquery lsp-mode cmake-font-lock cmake-mode reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key wgrep volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline smex restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint ivy-hydra indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-make helm helm-core google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump popup f dash s diminish define-word counsel-projectile projectile pkg-info epl counsel swiper ivy column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed async aggressive-indent adaptive-wrap ace-window ace-link avy))))
+    (focus dimmer yasnippet-snippets guru-mode god-mode zeal-at-point wakatime-mode vagrant-tramp vagrant twittering-mode theme-changer terraform-mode hcl-mode systemd sunshine spray spotify salt-mode mmm-jinja2 restclient-helm rebox2 rase ranger puppet-mode prodigy pandoc-mode ox-pandoc osx-location ob-restclient ob-http nginx-mode ledger-mode imenu-list helm-spotify-plus multi helm-dash gmail-message-mode ham-mode html-to-markdown geeknote flymd flycheck-ycmd flycheck-ledger fasd engine-mode elfeed-web elfeed-org elfeed-goodies ace-jump-mode elfeed edit-server dockerfile-mode docker docker-tramp deft company-ycmd ycmd company-restclient restclient know-your-http-well command-log-mode zenburn-theme zen-and-art-theme yapfify yaml-mode xkcd x86-lookup white-sand-theme web-mode web-beautify vimrc-mode utop underwater-theme ujelly-theme typo typit mmt twilight-theme twilight-bright-theme twilight-anti-bright-theme tuareg caml toxi-theme toml-mode tide typescript-mode thrift tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit swift-mode sunny-day-theme sudoku sublime-themes subatomic256-theme subatomic-theme stickyfunc-enhance stan-mode srefactor sql-indent spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smex slime-company slime slim-mode seti-theme selectric-mode scss-mode scad-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reverse-theme rebecca-theme rbenv rainbow-mode rainbow-identifiers railscasts-theme racket-mode faceup racer qml-mode pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode psci purescript-mode psc-ide projectile-rails rake professional-theme powershell pony-mode plantuml-mode planet-theme pip-requirements phpunit phpcbf php-extras php-auto-yasnippets phoenix-dark-pink-theme phoenix-dark-mono-theme pacmacs organic-green-theme org-ref pdf-tools key-chord tablist omtose-phellack-theme omnisharp shut-up oldlace-theme ocp-indent occidental-theme obsidian-theme ob-sml sml-mode ob-elixir noflet noctilux-theme nlinum-relative nlinum nix-mode nim-mode flycheck-nimsuggest commenter epc concurrent nasm-mode naquadah-theme mustang-theme mu4e-maildirs-extension mu4e-alert monokai-theme monochrome-theme molokai-theme moe-theme minitest minimal-theme merlin matlab-mode material-theme majapahit-theme magit-gh-pulls madhat2r-theme lush-theme lua-mode livid-mode live-py-mode light-soap-theme less-css-mode json-mode json-snatcher json-reformat js2-refactor js-doc jinja2-mode jbeans-theme jazz-theme ir-black-theme intero insert-shebang inkpot-theme idris-mode prop-menu ibuffer-projectile hy-mode hlint-refactor hindent heroku-theme hemisu-theme helm-pydoc helm-nixos-options helm-hoogle helm-gtags helm-css-scss helm-cscope xcscope helm-bibtex parsebib hc-zenburn-theme haskell-snippets haml-mode gruvbox-theme gruber-darker-theme graphviz-dot-mode grandshell-theme gotham-theme go-guru go-eldoc glsl-mode github-search github-clone github-browse-file gist gh marshal logito pcache ggtags geiser gandalf-theme fsharp-mode company-quickhelp flycheck-rust flycheck-nim flycheck-mix flycheck-haskell flycheck-elm flycheck-credo floobits flatui-theme flatland-theme fish-mode feature-mode faust-mode farmhouse-theme exotica-theme ess-smart-equals ess-R-data-view ctable ess julia-mode espresso-theme erlang ensime sbt-mode scala-mode emoji-cheat-sheet-plus emmet-mode elm-mode ein skewer-mode request-deferred deferred js2-mode simple-httpd drupal-mode php-mode dracula-theme django-theme disaster darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme dactyl-mode d-mode cython-mode cyberpunk-theme csv-mode csharp-mode company-web web-completion-data company-tern dash-functional tern company-shell company-nixos-options nixos-options company-go go-mode company-ghci company-ghc ghc haskell-mode company-emoji company-emacs-eclim eclim company-dcd ivy flycheck-dmd-dub company-cabal company-c-headers company-auctex company-ansible company-anaconda common-lisp-snippets color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized color-identifiers-mode coffee-mode cmm-mode cmake-mode clues-theme clojure-snippets clj-refactor inflections edn multiple-cursors paredit peg clang-format cider-eval-sexp-fu cider seq queue clojure-mode chruby cherry-blossom-theme cargo rust-mode busybee-theme bundler inf-ruby bubbleberry-theme birds-of-paradise-plus-theme biblio biblio-core badwolf-theme auctex-latexmk auctex arduino-mode apropospriate-theme anti-zenburn-theme ansible-doc ansible anaconda-mode pythonic ample-zen-theme ample-theme alect-themes alchemist elixir-mode ahk-mode afternoon-theme adoc-mode markup-faces 2048-game slack emojify circe oauth2 websocket ht rcirc-notify rcirc-color jabber fsm erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((((type nil)) (:background "#000000" :foreground "#f8f8f2")) (((class color) (min-colors 89)) (:background "#282a36" :foreground "#f8f8f2")))))
+ )
