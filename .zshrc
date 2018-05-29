@@ -60,6 +60,7 @@ ZSH_THEME=random
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  battery
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,14 +101,9 @@ alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias ew='emacs -nw'
 
-export EDITOR='nvim'
+export EDITOR='emacs'
 
-export TERM=konsole
-export TERMINAL=konsole
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-source /usr/share/nvm/init-nvm.sh
 
 export ANDROID_HOME=/home/prertik/Android/Sdk
 export ANDROID_NDK_HOME=/home/prertik/Android/Sdk/ndk-bundle
@@ -115,9 +111,13 @@ export ANDROID_NDK_HOME=/home/prertik/Android/Sdk/ndk-bundle
 export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
 
-export PATH="$PATH:$HOME/aplus-fsf-4.18/bin"
-export PATH="$PATH:$HOME/spl/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.5.1/bin"
 
-export CLASSPATH="/home/prertik/aspectj1.9/lib/aspectjrt.jar"
-export PATH="$PATH:$HOME/aspectj1.9/bin"
-export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+source ~/.rvm/scripts/rvm
+
+
+
+
